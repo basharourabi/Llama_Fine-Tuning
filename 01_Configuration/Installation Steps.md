@@ -37,7 +37,7 @@ instruction = "Create a function to calculate the sum of a sequence of integers.
 input = "[1, 2, 3, 4, 5]"
 huggingface_model_name = "mervinpraison/Llama-3.1-8B-bnb-4bit-python"
 
-# 2. Before Training
+# 2. Pre Training
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "unsloth/Meta-Llama-3.1-8B-bnb-4bit",
     max_seq_length = max_seq_length,
@@ -59,7 +59,7 @@ inputs = tokenizer(
 text_streamer = TextStreamer(tokenizer)
 _ = model.generate(**inputs, streamer = text_streamer, max_new_tokens = 1000)
 
-# 3. Load data
+# 3. Data Loading
 
 EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
 def formatting_prompts_func(examples):
@@ -138,7 +138,7 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-# 5. After Training
+# 5. Post Training
 FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 inputs = tokenizer(
 [
@@ -152,7 +152,7 @@ inputs = tokenizer(
 text_streamer = TextStreamer(tokenizer)
 _ = model.generate(**inputs, streamer = text_streamer, max_new_tokens = 1000)
 
-# 6. Saving
+# 6. Model Saving
 model.save_pretrained("lora_model") # Local saving
 tokenizer.save_pretrained("lora_model")
 model.push_to_hub(huggingface_model_name, token = os.getenv("HF_TOKEN")) 
