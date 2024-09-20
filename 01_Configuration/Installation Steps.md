@@ -10,7 +10,7 @@ _Grabbing a Huggingface TOKEN _
 grabbing a Huggingface Token from 
 
 
-![](/path/to/file)
+![](/path/to/file](https://github.com/basharourabi/Llama_Fine-Tuning/blob/main/00_Assets/images/Screenshot%202024-09-20%20094403.png)
 
 
 _Connecting to Huggingface_
