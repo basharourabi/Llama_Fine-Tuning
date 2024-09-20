@@ -4,6 +4,22 @@ _PIP Installs and Environment Setup_
 pip install huggingface_hub ipython "unsloth[colab] @ git+https://github.com/unsloth.git" "unsloth[conda] " git+https://github.com/unslothai/unsloth.git"
 ```
 
+
+_Grabbing a Huggingface TOKEN _
+
+grabbing a Huggingface Token from 
+
+
+![](/path/to/file)
+
+
+_Connecting to Huggingface_
+run the following terminal script after grabbing a Huggingface Token from 
+
+```bash
+EXPORT HF_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
 _Training Model Python Code_
 
 The script below is designed to train the a Llama model using a specific task and answering method
