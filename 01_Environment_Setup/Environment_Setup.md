@@ -12,7 +12,7 @@ python -m venv .venv
 pip install setuptools wheel -U
 python.exe -m pip install --upgrade pip
 ```
-_Step 3 Create a Requirements text file_
+_Step 3 - Create a Requirements text file_
 ```bash
 
 ```
